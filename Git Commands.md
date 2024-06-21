@@ -64,29 +64,41 @@ git push --force
    git push
 ```
 
-#### **repo**
+#### **repo - create**
 
-Easiest way is to just create trough the web GUI and then run the git commands locally
-
-**Create a new repository**
+Create a repo locally, will need to create an access token to use for the API. If the project page is for a group you need the namespace_id as well. Alternatively the repo can be initialized in remote to skip this.
 ```
+curl --request POST \
+     --header "PRIVATE-TOKEN: token_here" \
+     --data "name=example" \
+     --data "namespace_id=123456" \
+     "https://gitlab.com/api/v4/projects/"
+```
+
+```
+curl --request POST --header "PRIVATE-TOKEN: token_here" --data "name=example" --data "namespace_id=123456" "https://gitlab.com/api/v4/projects/"
+```
+
+
+**Clone existing**
+```
+cd repo_folder
 git clone https://gitlab.com/el-fly/gitcommands.git
-cd gitcommands
 git switch --create main
 touch README.md
-git add README.md
-git commit -m "add README"
-git push --set-upstream origin main
+git add .
+git commit -m "init"
+git push -u origin main
 ```
 
 **Push an existing folder**
 ```
-cd existing_folder
+cd repo_folder
 git init --initial-branch=main
-git remote add origin https://gitlab.com/el-fly/gitcommands.git
+git remote add origin https://gitlab.com/el-fly/example.git
 git add .
-git commit -m "Initial commit"
-git push --set-upstream origin main
+git commit -m "init"
+git push -u origin main
 ```
 
 #### **other**
