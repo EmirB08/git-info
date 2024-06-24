@@ -1,4 +1,4 @@
-#### **branch - create**
+### **branch - create**
 1. Checkout the branch you want to create from
 ```
    git checkout branch_name
@@ -15,7 +15,7 @@
 ```
    git push -u origin new_branch_name
 ```
-#### **branch - delete**
+### **branch - delete**
 1. Checkout an alternative branch - git won't allow deletion FROM a branch you want to delete
 ```
    git checkout alternative_branch
@@ -41,7 +41,7 @@
 ```
    git branch -D branch_name
 ```
-#### **branch - prune**
+### **branch - prune**
 **Fetch all branches and prune the stale branches that no longer exist on the remote**
 ```
 git fetch - p
@@ -50,7 +50,7 @@ git fetch - p
 ```
 git remote prune origin
 ```
-#### **commit - add**
+### **commit - add**
 1. Add the changes: 
 ```
    git add .
@@ -63,7 +63,7 @@ git remote prune origin
 ```
    git push 
 ```
-#### **commit - delete/hard reset**
+### **commit - delete/hard reset**
 
 1. Delete specified commit from local HEAD
 ```
@@ -77,7 +77,7 @@ git reset --hard~1
 ```
 git push --force
 ```
-#### **merge**
+### **merge**
 1. Checkout branch you want to merge into
 ```
    git checkout branch_name
@@ -94,32 +94,32 @@ git push --force
 ```
    git push
 ```
-#### **stash**
-**Stash changes**
+### **stash**
+Stash changes
 ```
 git stash
 ```
-**Apply most recent stash**
+Apply most recent stash
 ```
  git stash apply
 ```
-**List all stashes**
+List all stashes
 ```
 git stash list
 ```
-**Delete all stashes**
+Delete all stashes
 ```
 git stash clear
 ```
-**Apply a specific stash in list**
+Apply a specific stash in list
 ```
 git stash apply stash@{index number in list}
 ```
-**Delete specific stash from the list using index**
+Delete specific stash from the list using index
 ```
 git stash drop stash@{index number in list}
 ```
-#### **repo - create**
+### **repo - create**
 **Create remote - CLI**
 ```
 curl --request POST \
@@ -146,15 +146,15 @@ git push -u origin main
 
 
 
-#### **repo - clone**
-**Clone existing/active repo - example**
+### **repo - clone**
+Clone existing/active repo - example
 ```
    cd documents
    ls
    cd gitlab
    git clone https://gitlab.com/el-fly/example.git
 ```
-**Clone and push to blank repo - example **
+Clone and push to blank repo - example
 ```
 cd project_folder
 git clone https://gitlab.com/el-fly/example.git
@@ -164,38 +164,38 @@ git add .
 git commit -m "init"
 git push -u origin main
 ```
-#### **repo - delete**
+### **repo - delete**
 ```
 curl --request DELETE --header "PRIVATE-TOKEN: token_here" "https://gitlab.com/api/v4/projects/example"
 ```
 
-#### **other**
+### **other**
 
-**List local branches**
+List local branches
 ```
 git branch
 ```
-**List remote branches**
+List remote branches
 ```
 git branch -r
 ```
-**List local and remote branches**
+List local and remote branches
 ```
 git branch -a
 ```
-**Check branch status**
+Check branch status
 ```
 git status
 ```
-**Check branch commit history**
+Check branch commit history
 ```
 git log
 ```
-**Show changes in working directory**
+Show changes in working directory
 ```
 git diff
 ```
-**Unstage alle changes**
+Unstage alle changes
 ```
 git reset
 ```
