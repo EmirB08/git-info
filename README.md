@@ -1,1 +1,2 @@
-Collection of common git commands.
+Useful git commands, best used with Obsidian for extended formatting.
+
