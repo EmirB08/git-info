@@ -167,6 +167,22 @@ git diff
 git branch -d branchname && git push origin --delete branchname
 ```
 
+**Fetch all branches and prune the stale branches that no longer exist on the remote**
+
+```
+git fetch --prune
+
+or
+
+git fetch -p
+```
+
+**Prune using git remote prune to explicitly prune without fetching all updates**
+
+```
+git remote prune origin
+```
+
 **Stash changes**
 
 ```
