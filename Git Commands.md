@@ -202,5 +202,3 @@ git stash apply stash@{index number in list}
 ```
 git stash drop stash@{index number in list}
 ```
-
-test
