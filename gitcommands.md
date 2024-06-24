@@ -120,7 +120,7 @@ Delete specific stash from the list using index
 git stash drop stash@{index number in list}
 ```
 ### **repo - create**
-**Create remote - CLI**
+Create remote - CLI
 ```
 curl --request POST \
      --header "PRIVATE-TOKEN: token_here" \
@@ -133,7 +133,7 @@ curl --request POST \
 curl --request POST --header "PRIVATE-TOKEN: token_here" --data "name=example" --data "namespace_id=123456" "https://gitlab.com/api/v4/projects/"
 ```
 
-**Push local to remote**
+Push local to remote
 ```
 cd project_folder
 git init --initial-branch=main
