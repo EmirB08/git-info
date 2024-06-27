@@ -1,10 +1,14 @@
 
-### **Create**
+### **create**
 Create a file
 ```
 touch example.txt
 ```
-### **Delete**
+Create directory
+```
+mkdir directory_name
+```
+### **delete**
 
 Delete a file
 ```
@@ -22,7 +26,7 @@ Delete directory and all files in it
 ```
 rm -rf directory_name/
 ```
-### **Move**
+### **move/copy**
 
 Move a file
 ```
@@ -36,5 +40,33 @@ Move directory
 ```
 mv directory_name/ path/to/destination/
 ```
+Copy a file
+```
+cp source_file /path/to/destination/
+```
+Copy a directory
+```
+cp -r source_directory /path/to/destination
+```
 
-Navigate
+### **navigate/view**
+Show current directory path
+```
+pwd
+```
+List contents of current directory
+```
+ls
+```
+Change directory in path
+```
+cd /path/to/directory
+```
+Change to a directory in your home path - example
+```
+cd ~/documents
+```
+Move up one directory
+```
+cd ..
+```
