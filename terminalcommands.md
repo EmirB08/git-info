@@ -68,5 +68,5 @@ cd ~/documents
 ```
 Move up one directory
 ```
-cd ..
+..
 ```
