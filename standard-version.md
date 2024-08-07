@@ -144,7 +144,7 @@ This `package.json` file includes a `standard-version` field with the same custo
 }
 ```
 
-**Key Components Explained
+**Key Components Explained**
 
 - **`types`**: Defines the commit types that `standard-version` will recognize and include in the changelog. Each type has a `section` that will be used as a heading in the changelog and a `hidden` field to determine if it should be included in the changelog.
 - **`scripts`**: Defines scripts to run at various stages of the release process:
