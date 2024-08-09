@@ -193,7 +193,7 @@ curl --request POST \
 ```
 
 ```
-curl --request POST --header "PRIVATE-TOKEN: token_here" --data "name=example" --data "namespace_id=123456" "https://gitlab.com/api/v4/projects/"
+curl --request POST --header "PRIVATE-TOKEN: glpat-c2EFK-Y2Ryy5F2fSGCoC" --data "name=example" --data "namespace_id=77579999" "https://gitlab.com/api/v4/projects/"
 ```
 
 Push local to remote
