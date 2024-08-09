@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://gitlab.com/el-fly/gitcommands/compare/v1.1.0...v1.1.1) (2024-08-09)
+
+
+### Bug Fixes
+
+* Fixed typo ([e55d490](https://gitlab.com/el-fly/gitcommands/commit/e55d4903fe856ee1b781ea656fa193dfdaada6b6))
+
 ## [1.1.0](https://gitlab.com/el-fly/gitcommands/compare/v1.0.0...v1.1.0) (2024-08-09)
 
 
