@@ -17,6 +17,7 @@
     }
 ```
 
+The `package.json` file must contain an initial version number for `standard-version` to work.
 
 ## **Workflow**
 ##### 1. Make commits
@@ -47,8 +48,6 @@ Output:
 - The `feat` and `fix` commits will be included in the changelog and determine the version bump.
 - The `chore` and `docs` commits will not affect the version number or appear in the changelog.
  
-
-
 ##### 3. Push changes with tags
 
 ```
@@ -56,7 +55,7 @@ Output:
 ```
 
 
-### **How `standard-version` works**
+### How `standard-version` works
 
 **Commit Messages**
 `standard-version` relies on conventional commit messages. For example:
@@ -74,7 +73,7 @@ allowing you to control when to create a new release.
 `standard-version` is designed to work with conventional commits, focusing on significant changes like features and fixes. Commits without the recognized prefixes (`feat`, `fix`, etc.) will be ignored for versioning and changelog purposes by default. This ensures that your changelog and version bumps reflect meaningful updates to your project.
 
 
-##### **Version Bumping**
+#### Version Bumping
 In `standard-version`, version bumping is determined by the type of commits made since the last release. The default setup follows the principles of Semantic Versioning (SemVer):
 
 1. **Patch Version (X.Y.Z) Bump**: This is triggered by `fix` commits.
@@ -86,8 +85,52 @@ In `standard-version`, version bumping is determined by the type of commits made
 - **`0.x.0` versions**: A `feat` will bump the minor version to `0.x.0`, and a `fix` will bump the patch version to `0.x.y`.
 - **`1.0.0` and beyond**: Once the version hits `1.0.0`, the standard SemVer rules apply: `fix` for patch bumps, `feat` for minor bumps, and `BREAKING CHANGE` for major bumps.
 
+#### Manually Setting Project Version with `standard-version`
 
-### **Customizing `standard-version`**
+In some cases, you may want to manually set your project's version rather than relying on the automatic version bumping provided by `standard-version`. This guide explains how to manually bump your project's version and ensure your changelog and Git tags are correctly updated.
+
+##### **Steps to Manually Set the Version**
+
+ 1. **Manually Bump the Version**
+	To manually set the version of your project, use the `npm version` command. This is useful when you want to jump to a specific version, such as moving from a pre-release version to `1.0.0`. 
+
+	 Example: Moving from `0.0.1` to `1.0.0`
+
+	```
+	npm version 1.0.0
+	```
+
+	This command will:
+	- Update the `version` field in your `package.json` to `1.0.0`.
+	- Create a new commit with the message `v1.0.0`.
+	- Create a new Git tag `v1.0.0`.
+
+2. **Update the Changelog and Tag Using `standard-version`**
+	After manually setting the version, you can run `standard-version` to update the changelog and apply any additional release-related changes.
+	
+	```
+	npm run release -- --first-release
+	```
+	
+	The `--first-release` flag informs `standard-version` that this is the first release or a major version milestone, so it will start the changelog from this version (`1.0.0` in this case).
+
+3. **Push Changes to Your Git Repository**
+	Finally, push the changes, including the new tag, to your Git repository to share them with your team or deploy the release.
+	
+	```
+	git push --follow-tags origin main
+	```
+	
+	This command pushes both the commit and the new Git tag to the repository.
+
+##### **Recap of the Steps**
+
+1. **Manually bump the version** using `npm version <version>` to set the desired version.
+2. **Run `standard-version`** with the `--first-release` flag to update the changelog and create a release tag.
+3. **Push changes and tags** to your Git repository using `git push --follow-tags`.
+
+
+### Customizing `standard-version`
 
 You can customize the behavior of `standard-version` by creating a `.versionrc` file or by adding a `standard-version` field in your `package.json`. This allows you to configure things like:
 
