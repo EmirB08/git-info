@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://gitlab.com/el-fly/gitcommands/compare/v1.0.0...v1.1.0) (2024-08-09)
+
+
+### Features
+
+* Added section about manually setting version in standard-version. ([32545e9](https://gitlab.com/el-fly/gitcommands/commit/32545e946491195e7ed7c35b52b5cb6a4bebe312))
+
 ### 0.0.1 (2024-08-09)
 
 
