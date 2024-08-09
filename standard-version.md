@@ -118,7 +118,7 @@ In some cases, you may want to manually set your project's version rather than r
 	Finally, push the changes, including the new tag, to your Git repository to share them with your team or deploy the release.
 	
 	```
-	git push --follow-tags origin main
+	git push --follow-tags origin your_branch_name
 	```
 	
 	This command pushes both the commit and the new Git tag to the repository.
