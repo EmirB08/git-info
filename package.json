@@ -1,4 +1,6 @@
 {
+  "name": "commands-and-info",
+  "version": "0.0.0",
   "devDependencies": {
     "standard-version": "^9.5.0"
   },
