@@ -6,10 +6,15 @@
    npm install --save-dev standard-version
 ```
 
-##### 2. Add a release script to your `package.json`:
+##### 2. Add a project name, initial version and a release script to your `package.json`:
 
 ```json
-   "scripts": { "release": "standard-version" }
+
+   { 
+	   "name": "your-project-name", 
+	   "version": "0.0.0", 
+	   "scripts": { "release": "standard-version" }
+    }
 ```
 
 
