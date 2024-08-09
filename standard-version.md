@@ -69,7 +69,20 @@ allowing you to control when to create a new release.
 `standard-version` is designed to work with conventional commits, focusing on significant changes like features and fixes. Commits without the recognized prefixes (`feat`, `fix`, etc.) will be ignored for versioning and changelog purposes by default. This ensures that your changelog and version bumps reflect meaningful updates to your project.
 
 
-### Customizing `standard-version`
+##### **Version Bumping**
+In `standard-version`, version bumping is determined by the type of commits made since the last release. The default setup follows the principles of Semantic Versioning (SemVer):
+
+1. **Patch Version (X.Y.Z) Bump**: This is triggered by `fix` commits.
+2. **Minor Version (X.Y.0) Bump**: This is triggered by `feat` commits.
+3. **Major Version (X.0.0) Bump**: This is triggered by `BREAKING CHANGE` notes in any commit, regardless of the commit type.
+
+**`Standard-version` applies special rules to pre-1.0.0 versions:**
+- **`0.0.x` versions**: All types of changes will bump only the patch number (`0.0.1`, `0.0.2`, etc.).
+- **`0.x.0` versions**: A `feat` will bump the minor version to `0.x.0`, and a `fix` will bump the patch version to `0.x.y`.
+- **`1.0.0` and beyond**: Once the version hits `1.0.0`, the standard SemVer rules apply: `fix` for patch bumps, `feat` for minor bumps, and `BREAKING CHANGE` for major bumps.
+
+
+### **Customizing `standard-version`**
 
 You can customize the behavior of `standard-version` by creating a `.versionrc` file or by adding a `standard-version` field in your `package.json`. This allows you to configure things like:
 
