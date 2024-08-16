@@ -67,7 +67,7 @@
 **Fetch all branches and prune the stale branches that no longer exist on the remote**
 
 ```
-git fetch - p
+git fetch -p
 ```
 
 **Prune without fetching all updates**
