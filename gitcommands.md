@@ -53,7 +53,7 @@
 **Delete local and remote in one line**
 
 ```
-   git push branch -d branch_name && git push origin --delete branch_name
+   git branch -d branch_name && git push origin --delete branch_name
 ```
 
 **Force delete a branch using -D will delete a branch with unmerged changes**
