@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://gitlab.com/el-fly/gitcommands/compare/v1.1.2...v1.1.3) (2024-08-16)
+
+
+### Bug Fixes
+
+* Fixed wrong delete command. ([dbdcffa](https://gitlab.com/el-fly/gitcommands/commit/dbdcffa7ed665fddbf729c663edfa1e57535201d))
+
 ### [1.1.2](https://gitlab.com/el-fly/gitcommands/compare/v1.1.1...v1.1.2) (2024-08-09)
 
 ### [1.1.1](https://gitlab.com/el-fly/gitcommands/compare/v1.1.0...v1.1.1) (2024-08-09)
