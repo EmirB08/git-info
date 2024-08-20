@@ -193,7 +193,7 @@ curl --request POST \
 ```
 
 ```
-curl --request POST --header "PRIVATE-TOKEN: glpat-c2EFK-Y2Ryy5F2fSGCoC" --data "name=example" --data "namespace_id=77579999" "https://gitlab.com/api/v4/projects/"
+curl --request POST --header "PRIVATE-TOKEN: token_here" --data "name=example" --data "namespace_id=123456" "https://gitlab.com/api/v4/projects/"
 ```
 
 Push local to remote
@@ -201,7 +201,7 @@ Push local to remote
 ```
 cd project_folder
 git init --initial-branch=main
-git remote add origin https://gitlab.com/el-fly/example.git
+git remote add origin https://gitlab.com/example/example.git
 touch README.md
 git add .
 git commit -m "init"
@@ -216,14 +216,14 @@ Clone existing/active repo - example
    cd documents
    ls
    cd gitlab
-   git clone https://gitlab.com/el-fly/example.git
+   git clone https://gitlab.com/example/example.git
 ```
 
 Clone and push to blank repo - example
 
 ```
 cd project_folder
-git clone https://gitlab.com/el-fly/example.git
+git clone https://gitlab.com/example/example.git
 git switch --create main
 touch README.md
 git add .
